@@ -149,7 +149,7 @@
 
 		// Left paddle mechanism
 		let paddleLeft = {};
-		paddleLeft.paddle = Matter.Bodies.trapezoid(170, 660, 20, 80, 0.33, {
+		paddleLeft.paddle = Matter.Bodies.trapezoid(170, 661, 20, 80, 0.33, {
 			label: 'paddleLeft',
 			angle: 1.57,
 			chamfer: {},
