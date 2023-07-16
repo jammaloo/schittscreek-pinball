@@ -240,8 +240,8 @@
 				strokeStyle: COLOR.PINBALL,
 				sprite: {
 					texture: 'images/pinball.png',
-					xScale: 0.06,
-					yScale: 0.06,
+					xScale: 1,
+					yScale: 1,
 				},
 			},
 		});
@@ -337,9 +337,11 @@
 
 		// flash color
 		bumper.render.fillStyle = COLOR.BUMPER_LIT;
+		bumper.render.sprite.texture = 'images/bumper_lit.png';
 		setTimeout(function() {
 			bumper.render.fillStyle = COLOR.BUMPER;
-		}, 100);
+			bumper.render.sprite.texture = 'images/bumper.png';
+		}, 500);
 	}
 
 	function updateScore(newCurrentScore) {
@@ -398,8 +400,13 @@
 			label: 'bumper',
 			isStatic: true,
 			render: {
-				fillStyle: COLOR.BUMPER
-			}
+				fillStyle: COLOR.BUMPER,
+				sprite: {
+					texture: 'images/bumper.png',
+					xScale: 1,
+					yScale: 1,
+				},
+			},
 		});
 
 		// for some reason, restitution is reset unless it's set after body creation
