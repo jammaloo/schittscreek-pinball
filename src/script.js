@@ -84,6 +84,8 @@
 
 	function createStaticBodies() {
 		Matter.World.add(world, [
+			// johnny's Face
+			johnny(),
 			// table boundaries (top, bottom, left, right)
 			boundary(250, -30, 500, 100),
 			boundary(250, 830, 500, 100),
@@ -132,7 +134,8 @@
 
 			// reset zones (center, right)
 			reset(225, 50),
-			reset(465, 30)
+			reset(465, 30),
+
 		]);
 	}
 
@@ -154,7 +157,12 @@
 			angle: 1.57,
 			chamfer: {},
 			render: {
-				fillStyle: COLOR.PADDLE
+				fillStyle: COLOR.PADDLE,
+				sprite: {
+					texture: 'images/eyebrow.png',
+					xScale: 1,
+					yScale: 1,
+				}
 			}
 		});
 		paddleLeft.brick = Matter.Bodies.rectangle(172, 672, 40, 80, {
@@ -194,7 +202,12 @@
 			angle: -1.57,
 			chamfer: {},
 			render: {
-				fillStyle: COLOR.PADDLE
+				fillStyle: COLOR.PADDLE,
+				sprite: {
+					texture: 'images/eyebrow2.png',
+					xScale: 1,
+					yScale: 1,
+				}
 			}
 		});
 		paddleRight.brick = Matter.Bodies.rectangle(278, 672, 40, 80, {
@@ -374,7 +387,7 @@
 			isStatic: true,
 			chamfer: { radius: 10 },
 			render: {
-				fillStyle: color
+				fillStyle: color,
 			}
 		});
 	}
@@ -413,6 +426,28 @@
 		bumper.restitution = BUMPER_BOUNCE;
 
 		return bumper;
+	}
+
+	// johnny's Face
+	function johnny() {
+		const johnnyRose = Matter.Bodies.rectangle(220, 660, 50, 50, {
+			render: {
+				strokeStyle: '#ffffff',
+				sprite: {
+					texture: 'images/johnny.png',
+					xScale: 0.8,
+					yScale: 0.8,
+				},
+			},
+			isStatic: true,
+		});
+		// turns off collisions
+		johnnyRose.collisionFilter = {
+			'group': -1,
+			'category': 2,
+			'mask': 0,
+		};
+		return johnnyRose;
 	}
 
 	// invisible bodies to constrict paddles
