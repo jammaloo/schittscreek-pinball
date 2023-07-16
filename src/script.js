@@ -17,7 +17,7 @@
 		BUMPER: '#fab005',
 		BUMPER_LIT: '#fff3bf',
 		PADDLE: '#e64980',
-		PINBALL: '#dee2e6'
+		PINBALL: '#dee2e6',
 	};
 	const GRAVITY = 0.75;
 	const WIREFRAMES = false;
