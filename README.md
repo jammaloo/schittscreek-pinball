@@ -1,6 +1,6 @@
 # Schitt's Creek Pinball
 
-Demo: https://jammaloo.com/schitts-creek-pinball/
+Demo: https://jammaloo.com/schitts-creek-pinball/src
 
 Based on a Pen created on CodePen.io. Original URL: [https://codepen.io/lonekorean/pen/KXLrVX](https://codepen.io/lonekorean/pen/KXLrVX).
 
