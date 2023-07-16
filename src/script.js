@@ -236,8 +236,14 @@
 				group: stopperGroup
 			},
 			render: {
-				fillStyle: COLOR.PINBALL
-			}
+				fillStyle: COLOR.PINBALL,
+				strokeStyle: COLOR.PINBALL,
+				sprite: {
+					texture: 'images/pinball.png',
+					xScale: 0.06,
+					yScale: 0.06,
+				},
+			},
 		});
 		Matter.World.add(world, pinball);
 		launchPinball();
