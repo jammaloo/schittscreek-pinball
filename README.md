@@ -1,6 +1,8 @@
-# Pinball Physics
+# Schitt's Creek Pinball
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/lonekorean/pen/KXLrVX](https://codepen.io/lonekorean/pen/KXLrVX).
+Demo: https://jammaloo.com/schitts-creek-pinball/
+
+Based on a Pen created on CodePen.io. Original URL: [https://codepen.io/lonekorean/pen/KXLrVX](https://codepen.io/lonekorean/pen/KXLrVX).
 
 Use left/right arrow keys or tap (and hold) buttons to control paddles. Powered by [matter.js](http://brm.io/matter-js/).
 
